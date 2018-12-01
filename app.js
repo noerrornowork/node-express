@@ -10,7 +10,8 @@ const app = express()
 app.engine('html', require('express-art-template'))
 
 // 托管静态资源
-app.set(express.static(path.join(__dirname, 'public')))
+app.use('/node_modules/', express.static('./node_modules'))
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())

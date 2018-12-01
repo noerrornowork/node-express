@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>学生管理系统</title>
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <style>
+      .inforce {
+        text-align: center;
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h2 class="sub-header inforce">学生管理系统</h2>
+          <form action="/student/new" method="post">
+            <div class="form-group">
+              <label for="name">姓名: </label>
+              <input type="text" class="form-control" name="name" placeholder="请输入姓名">
+            </div>
+            <div class="form-group">
+              <label for="gender">性别: </label>
+              <input type="radio" name="gender" placeholder="请输入性别" value="0"> 男
+              <input type="radio" name="gender" placeholder="请输入性别" value="1"> 女
+            </div>
+            <div class="form-group">
+              <label for="age">年龄: </label>
+              <input type="text" class="form-control" name="age" placeholder="请输入年龄">
+            </div>
+            <div class="form-group">
+              <label for="hobbies">爱好: </label>
+              <input type="text" class="form-control" name="hobbies" placeholder="请输入爱好">
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
